@@ -1,0 +1,152 @@
+.ab{
+    position: absolute;
+}
+body{
+    user-select: none;
+}
+.warp{
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 512px;
+    height: 768px;
+}
+
+/* 游戏界面 */
+.warp .map{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/bg_1.jpg);
+    
+}
+/* 我军飞机 */
+.warp .map .plane{
+    position: absolute;
+    width: 50px;
+    height: 38px;
+}
+.warp .map .allbiu{
+    width: 100%;
+    height: 100%;
+}
+/* 我军子弹 */
+.warp .map .allbiu .fire{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+}
+/* 敌军飞机 */
+.warp .map .enemy{
+    position: absolute;
+}
+/* 飞机爆炸 */
+.warp .map .boom{
+    position: absolute;
+    animation: small 0.8s forwards;
+}
+@keyframes small{
+    from{opacity: 1;}
+    to{opacity: 0;}
+}
+
+.warp .map .boom2{
+    position: absolute;
+    animation: big 2s forwards;
+}
+@keyframes big {
+    0%{opacity: 1;}
+    20%{opacity: 0;}
+    40%{opacity: 1;}
+    60%{opacity: 0;}
+    80%{opacity: 1;}
+    100%{opacity: 0;}
+}
+/* 游戏标题 */
+.warp .title{
+    top: 10%;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 50px;
+    color: #fff;
+}
+.warp .title:hover{
+    color: blue;
+    transition: all 2s;
+}
+
+/* 难度选择 */
+.warp .difficulty{
+    top: 40%;
+    width: 100%;
+}
+.warp .difficulty ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.warp .difficulty li{
+    margin: 20px;
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.warp .difficulty li:hover{
+    background: blue;
+    transition: all 1s;
+}
+
+/* 分数 */
+.warp .fraction{
+    display: none;
+    left: 10px;
+    top: 10px;
+    font-size: 20px;
+    color: #fff;
+}
+
+/* 评价 */
+.warp .evaluate{
+    display: none;
+    top: 40%;
+    width: 100%;
+}
+.warp .evaluate ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-size: 16px;
+    color: #fff;
+}
+.warp .evaluate ul li{
+    margin: 40px;
+}
+.warp .evaluate ul li:nth-of-type(1) span:nth-of-type(2){
+    color: red;
+}
+.warp .evaluate ul li:nth-of-type(2) span:nth-of-type(2){
+    font-size: 20px;
+    color: #FFA80C;
+}
+.warp .evaluate ul li:nth-of-type(3){
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 5px;
+    color: #000;
+    background: #D0D4D4;
+}
+.warp .evaluate ul li:nth-of-type(3):hover{
+    background: #eee;
+    cursor: pointer;
+}
