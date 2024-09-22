@@ -11,7 +11,10 @@ import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/xy0908.github.io/",
+  base: '',
+  build: {
+    outDir: 'dist',
+  },
   plugins: [
     vue(),
     Unocss(),
